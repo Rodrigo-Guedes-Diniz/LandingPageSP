@@ -1,0 +1,5 @@
+#duvidas {
+    background-color: var(--color-primary-1);
+    display: flex;
+    flex-direction: row;
+}

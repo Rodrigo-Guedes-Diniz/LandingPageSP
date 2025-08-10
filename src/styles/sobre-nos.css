@@ -1,0 +1,18 @@
+#sobre-nos {
+    background-color: var(--color-primary-3);
+    width: 100%;
+    padding: 40px 0;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+
+.icones img {
+    width: 15%;
+}
