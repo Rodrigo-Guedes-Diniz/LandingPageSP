@@ -2,4 +2,35 @@
     background-color: var(--color-primary-1);
     display: flex;
     flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    color: var(--color-primary-3);
+}
+
+#duvidas #cta_buttons a {
+    background-color: var(--color-primary-3);
+    color: var(--color-primary-1);
+}
+
+#duvidas img {
+    width: 10%;
+    height: 10%;
+}
+
+#duvidas li {
+    display: flex;
+    flex-direction: row;
+}
+
+#duvidas .metadeUm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+#duvidas .metadeDois li {
+    align-items: center;
+    padding: 2rem;
 }
