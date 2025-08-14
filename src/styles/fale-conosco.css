@@ -4,9 +4,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--color-primary-3);
+}
+
+#fale-conosco h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .fale-conosco-botoes {
     display: flex;
     gap: 50px;
+    font-size: 20px;
+}
+
+#fale-conosco .btn-default {
+    color: var(--color-primary-1);
 }

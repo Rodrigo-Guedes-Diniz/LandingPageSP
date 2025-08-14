@@ -5,6 +5,10 @@
     
 }
 
+#home #cta h1 {
+    color: var(--color-primary-3);
+}
+
 #cta {
     width: 35%;
     display: flex;
@@ -33,7 +37,7 @@
 
 #cta_buttons a {
     text-decoration: none;
-    color: var(--color-neutral-1);;
+    color: var(--color-primary-1);;
 }
 
 #phone_button {
