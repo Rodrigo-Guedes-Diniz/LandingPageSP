@@ -37,14 +37,20 @@
     color: var(--color-primary-1);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     
+    .fale-conosco-botoes {
+        display: flex;
+        flex-direction: column;
+    }
+
     #fale-conosco h1 {
         font-size: 12pt;
     }
 
     #fale-conosco .cta_buttons a {
-        font-size: 12pt;
+        font-size: 15pt;
+        font-weight: 800;
     }
     
 }

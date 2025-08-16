@@ -12,8 +12,13 @@
     height: 10%;
 }
 
-.cta_buttons {
+.metadeUm .cta_buttons {
+    display: block;
     max-width: fit-content;
+}
+
+.metadeDois .cta_buttons {
+    display: none;
 }
 
 .cta_buttons a {
@@ -45,6 +50,34 @@
     #duvidas {
         display: flex;
         flex-direction: column;
+    }
+
+    .metadeUm .cta_buttons {
+        display: none;
+    }
+    
+    .metadeDois .cta_buttons {
+        margin-top: 20px 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .metadeDois .cta_buttons a {
+        display: flex;
+        justify-content: center;
+        font-size: 15pt;
+        text-align: center;
+        height: 60px;
+        font-weight: 800;
+    }
+
+    #duvidas img {
+        width: 18%;
+    }
+
+    #duvidas h2 {
+        font-size: 12pt;
+        margin-left: 10px;
     }
 
     .metadeUm, .metadeDois {

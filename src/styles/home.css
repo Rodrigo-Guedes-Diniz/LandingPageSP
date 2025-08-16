@@ -117,18 +117,18 @@
 
 @media (max-width: 450px) {
   #home {
-    padding: 18px 6%;
+    padding: 1%;
   }
 
   #home #cta h1.title {
     text-align: center;
-    font-size: clamp(14px, 5vw, 20px);
-    margin: 8px 0;
+    font-size: 14pt;
   }
 
   #banner img {
-    width: 140px;
-    max-width: 45%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 110%;
   }
 
   #cta_buttons {

@@ -71,9 +71,11 @@ $(document).ready(function() {
   $(".cartao").click(function() {
 
     $(".cartao-texto").slideUp(300);
+    $(".cartao i.fa-chevron-down").show();
 
     if (!$(this).find(".cartao-texto").is(":visible")) {
         $(this).find(".cartao-texto").slideDown(300);
+        $(this).find("i.fa-chevron-down").hide();
     }
     
   });
