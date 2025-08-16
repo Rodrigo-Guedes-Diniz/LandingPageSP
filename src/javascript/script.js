@@ -54,6 +54,12 @@ $(document).ready(function() {
         distance: '20%'
     })
 
+    ScrollReveal().reveal('.card', {
+        origin: 'left',
+        duration: 1000,
+        distance: '20%'
+    })
+
     ScrollReveal().reveal('.feedback', {
         origin: 'right',
         duration: 1000,

@@ -80,12 +80,28 @@
     }
 }
 
-@media screen and (max-width: 1170px) {
-    .card {
-        width: 50%;
-    }
+@media (max-width: 480px) {
+  #contabilidade {
+    min-height: auto;
+    padding: 32px 6%;
+  }
 
-    #contabilidade .section-subtitle {
-        text-align: center;
-    }
-} 
+  .card {
+    width: 100% !important;
+    max-width: 420px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  #cards {
+    gap: 12px;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+
+  #cards img {
+    width: 60%;
+  }
+}

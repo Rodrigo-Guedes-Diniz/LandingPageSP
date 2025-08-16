@@ -5,19 +5,46 @@
     justify-content: center;
     align-items: center;
     color: var(--color-primary-3);
+    max-height: 236px;
 }
 
 #fale-conosco h1 {
-    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48pt;
     margin-bottom: 20px;
 }
 
 .fale-conosco-botoes {
     display: flex;
+    flex-direction: row;
     gap: 50px;
-    font-size: 20px;
+}
+
+#fale-conosco .cta_buttons a {
+        font-size: 24pt;
+        text-decoration: none;;
+}
+
+.fale-conosco-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #fale-conosco .btn-default {
     color: var(--color-primary-1);
+}
+
+@media screen and (max-width: 480px) {
+    
+    #fale-conosco h1 {
+        font-size: 12pt;
+    }
+
+    #fale-conosco .cta_buttons a {
+        font-size: 12pt;
+    }
+    
 }

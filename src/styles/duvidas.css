@@ -7,14 +7,19 @@
     color: var(--color-primary-3);
 }
 
-#duvidas #cta_buttons a {
-    background-color: var(--color-primary-3);
-    color: var(--color-primary-1);
-}
-
 #duvidas img {
     width: 10%;
     height: 10%;
+}
+
+.cta_buttons {
+    max-width: fit-content;
+}
+
+.cta_buttons a {
+    text-decoration: none;
+    color: var(--color-primary-1);
+    font-size: 18pt;
 }
 
 #duvidas li {
@@ -33,4 +38,19 @@
 #duvidas .metadeDois li {
     align-items: center;
     padding: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+
+    #duvidas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .metadeUm, .metadeDois {
+    display: flex;
+    flex-direction: column;
+    }
+
+
 }
