@@ -65,13 +65,13 @@ footer .final {
   text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1170px) {
   .textos h1 { font-size: 32px; }
   .textos p { font-size: 16px; }
   footer .final { padding: 48px 6% 24px; }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1170px) {
   #footer_items {
     flex-direction: column;
     gap: 20px;

@@ -4,6 +4,8 @@ $(document).ready(function() {
         $('#mobile_btn').find('i').toggleClass('fa-x');
     });
 
+    
+
     const sections = $('section');
     const navItems = $('.nav-item');
 
@@ -40,7 +42,7 @@ $(document).ready(function() {
         distance: '20%'
     });
 
-    ScrollReveal().reveal('.dish', {
+    ScrollReveal().reveal('.cartao', {
         origin: 'left',
         duration: 2000,
         distance: '20%'
@@ -58,3 +60,24 @@ $(document).ready(function() {
         distance: '20%'
     })
 });
+
+$(document).ready(function() {
+  $(".cartao").click(function() {
+
+    $(".cartao-texto").slideUp(300);
+
+    if (!$(this).find(".cartao-texto").is(":visible")) {
+        $(this).find(".cartao-texto").slideDown(300);
+    }
+    
+  });
+});
+
+/*
+$(document).ready(function() {
+  $(".cartao").click(function() {
+    $(".cartao-texto").not($(this).find(".cartao-texto")).slideUp();
+    $(this).find(".cartao-texto").slideToggle(300);
+  });
+});
+*/
