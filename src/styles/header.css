@@ -71,6 +71,7 @@ header {
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+        margin-left: auto;
     }
 
     #mobile_menu.active {

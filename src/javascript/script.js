@@ -36,6 +36,14 @@ $(document).ready(function() {
         $(navItems[activeSectionIndex]).addClass('active');
     });
 
+    $(document).ready(function() {
+        // Fecha o menu mobile ao clicar em um link
+        $('#mobile_nav_list .nav-item a').on('click', function () {
+            $('#mobile_menu').removeClass('active');
+            $('#mobile_btn').find('i').removeClass('fa-x'); // volta pro ícone de menu
+        });
+    });
+
     ScrollReveal().reveal('#cta', {
         origin: 'left',
         duration: 2000,
@@ -80,6 +88,8 @@ $(document).ready(function() {
     
   });
 });
+
+
 
 /*
 $(document).ready(function() {

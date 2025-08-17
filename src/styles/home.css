@@ -3,6 +3,10 @@
     position: relative;
     background-color: var(--color-primary-1);
     max-height: fit-content;
+    background-image: url(../images/FOTO\ SERGIO.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
 }
 
 #banner, #cta {
