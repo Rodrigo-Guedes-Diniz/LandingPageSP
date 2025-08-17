@@ -13,6 +13,10 @@ footer .final {
   display: none;
 }
 
+.icones-mobile span {
+  display: none;
+}
+
 .textos {
   max-width: 100%;       
   display: flex;
@@ -90,12 +94,12 @@ footer .final {
     display: none;
   }
 
-  .icones-mobile img {
+  .icones-redes img {
     margin-top: 50px;
     width: 50%;
   }
 
-  .icones-mobile {
+  .icones-redes {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -103,6 +107,7 @@ footer .final {
     justify-content: center;
     align-items: center;
   }
+  
   #copyright-mobile {
     font-weight: 600;
     color: var(--color-primary-1);

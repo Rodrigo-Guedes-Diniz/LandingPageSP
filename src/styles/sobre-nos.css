@@ -64,8 +64,10 @@
     --icon-size: 220px;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 800px) {
   .icones {
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
   }
   .icones > div { flex: 0 0 45%; max-width: 45%; }

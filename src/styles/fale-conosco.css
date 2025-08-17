@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48pt;
+    font-size: 33pt;
     margin-bottom: 20px;
 }
 
@@ -23,8 +23,8 @@
 }
 
 #fale-conosco .cta_buttons a {
-        font-size: 24pt;
-        text-decoration: none;;
+    font-size: 18pt;
+    text-decoration: none;;
 }
 
 .fale-conosco-botoes {

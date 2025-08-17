@@ -12,6 +12,18 @@
     height: 10%;
 }
 
+.metadeDois h2 {
+    margin-left: 20px;
+}
+
+.metadeUm h1 {
+    font-size: 27pt;
+}
+
+.metadeUm h2 {
+    font-size: 23pt;
+}
+
 .metadeUm .cta_buttons {
     display: block;
     max-width: fit-content;
@@ -43,6 +55,13 @@
 #duvidas .metadeDois li {
     align-items: center;
     padding: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    #duvidas {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 450px) {
