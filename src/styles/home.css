@@ -48,7 +48,8 @@
 
 #cta_buttons a {
     text-decoration: none;
-    color: var(--color-primary-1);;
+    color: var(--color-primary-1);
+    font-weight: 800;
 }
 
 #phone_button {

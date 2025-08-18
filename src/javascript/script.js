@@ -77,15 +77,30 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $(".cartao").click(function() {
+    var $this = $(this);
 
-    $(".cartao-texto").slideUp(300);
-    $(".cartao i.fa-chevron-down").show();
+    // fecha os outros cards abertos
+    $(".cartao").not($this).each(function() {
+      $(this).find(".cartao-texto").slideUp(300);
+      $(this).removeClass("aberto");
+      $(this).find("i.fa-chevron-down").show();
+      $(this).find("i.fa-chevron-up").hide();
+    });
 
-    if (!$(this).find(".cartao-texto").is(":visible")) {
-        $(this).find(".cartao-texto").slideDown(300);
-        $(this).find("i.fa-chevron-down").hide();
+    // toggle do card clicado
+    if ($this.find(".cartao-texto").is(":visible")) {
+      $this.find(".cartao-texto").slideUp(300, function() {
+        $this.removeClass("aberto");
+      });
+      $this.find("i.fa-chevron-down").show();
+      $this.find("i.fa-chevron-up").hide();
+    } else {
+      // marca como aberto antes de animar para evitar piscar no CSS
+      $this.addClass("aberto");
+      $this.find(".cartao-texto").slideDown(300);
+      $this.find("i.fa-chevron-down").hide();
+      $this.find("i.fa-chevron-up").show();
     }
-    
   });
 });
 
