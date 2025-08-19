@@ -78,6 +78,7 @@
 @media (max-width: 450px) {
   #sobre-nos #cta_buttons {
   margin-left: 0;
+  margin-bottom: 8%;
   display: flex;
   justify-content: center;
   font-size: 12pt;

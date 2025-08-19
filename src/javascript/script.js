@@ -37,10 +37,9 @@ $(document).ready(function() {
     });
 
     $(document).ready(function() {
-        // Fecha o menu mobile ao clicar em um link
         $('#mobile_nav_list .nav-item a').on('click', function () {
             $('#mobile_menu').removeClass('active');
-            $('#mobile_btn').find('i').removeClass('fa-x'); // volta pro ícone de menu
+            $('#mobile_btn').find('i').removeClass('fa-x');
         });
     });
 
@@ -79,7 +78,6 @@ $(document).ready(function() {
   $(".cartao").click(function() {
     var $this = $(this);
 
-    // fecha os outros cards abertos
     $(".cartao").not($this).each(function() {
       $(this).find(".cartao-texto").slideUp(300);
       $(this).removeClass("aberto");
@@ -87,7 +85,6 @@ $(document).ready(function() {
       $(this).find("i.fa-chevron-up").hide();
     });
 
-    // toggle do card clicado
     if ($this.find(".cartao-texto").is(":visible")) {
       $this.find(".cartao-texto").slideUp(300, function() {
         $this.removeClass("aberto");
@@ -95,7 +92,6 @@ $(document).ready(function() {
       $this.find("i.fa-chevron-down").show();
       $this.find("i.fa-chevron-up").hide();
     } else {
-      // marca como aberto antes de animar para evitar piscar no CSS
       $this.addClass("aberto");
       $this.find(".cartao-texto").slideDown(300);
       $this.find("i.fa-chevron-down").hide();
@@ -103,14 +99,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
-
-/*
-$(document).ready(function() {
-  $(".cartao").click(function() {
-    $(".cartao-texto").not($(this).find(".cartao-texto")).slideUp();
-    $(this).find(".cartao-texto").slideToggle(300);
-  });
-});
-*/

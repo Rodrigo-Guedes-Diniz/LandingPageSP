@@ -1,108 +1,163 @@
 #duvidas {
-    background-color: var(--color-primary-1);
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
-    color: var(--color-primary-3);
+  background-color: var(--color-primary-1);
+  color: var(--color-primary-3);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#duvidas img {
-    width: 10%;
-    height: 10%;
+#duvidas .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 8%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.metadeDois h2 {
-    margin-left: 20px;
+.metadeUm,
+.metadeDois {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.metadeUm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .metadeUm h1 {
-    font-size: 27pt;
+  margin: 0;
+  font-size: 27pt;
 }
 
 .metadeUm h2 {
-    font-size: 23pt;
+  margin: 0;
+  font-size: 23pt;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .metadeUm .cta_buttons {
-    display: block;
-    max-width: fit-content;
+  display: block;
+  margin-top: 6px;
+}
+
+.cta_buttons a.btn-default {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-primary-1);
+  font-size: 18pt;
+  background: white;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.metadeDois {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0;
+}
+
+.metadeDois ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metadeDois li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.metadeDois img {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.metadeDois h2 {
+  margin: 0;
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .metadeDois .cta_buttons {
-    display: none;
-}
-
-.cta_buttons a {
-    text-decoration: none;
-    color: var(--color-primary-1);
-    font-size: 18pt;
-}
-
-#duvidas li {
-    display: flex;
-    flex-direction: row;
-}
-
-#duvidas .metadeUm {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    width: 100%;
-}
-
-#duvidas .metadeDois li {
-    align-items: center;
-    padding: 2rem;
+  display: none;
+  margin-top: 12px;
 }
 
 @media screen and (max-width: 800px) {
-    #duvidas {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    #duvidas {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .metadeUm .cta_buttons {
-        display: none;
-    }
-    
-    .metadeDois .cta_buttons {
-        margin-top: 20px 20px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    .metadeDois .cta_buttons a {
-        display: flex;
-        justify-content: center;
-        font-size: 15pt;
-        text-align: center;
-        height: 60px;
-        font-weight: 800;
-    }
-
-    #duvidas img {
-        width: 18%;
-    }
-
-    #duvidas h2 {
-        font-size: 12pt;
-        margin-left: 10px;
-    }
-
-    .metadeUm, .metadeDois {
+  #duvidas .container {
     display: flex;
     flex-direction: column;
-    }
+    padding: 40px 6%;
+    gap: 5rem;
+  }
+
+  .metadeUm h1 {
+    font-size: 18pt;
+  }
+
+  .metadeUm h2 {
+    font-size: 14pt;
+  }
 
 
+  .metadeUm .cta_buttons {
+    display: none;
+  }
+
+  .metadeUm {
+    align-items: center;
+    text-align: center;
+  }
+
+  .metadeDois {
+    align-items: center;
+  }
+
+  .metadeDois ul {
+    gap: 18px;
+  }
+
+  .metadeDois li {
+    gap: 12px;
+  }
+
+  .metadeDois h2 {
+    font-size: 14pt;
+  }
+
+  .metadeDois img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .metadeDois .cta_buttons a {
+    font-size: 13pt;
+    font-weight: 800;
+  }
+
+  .metadeDois .cta_buttons {
+    display: flex;
+    justify-content: center;
+  }
 }
