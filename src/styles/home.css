@@ -37,11 +37,13 @@
   max-width: clamp(320px, 58%, 900px);
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1rem;
   margin-top: 4%;
   margin-bottom: 200px;
   box-sizing: border-box;
   z-index: 3;
+  transition: min-height 240ms esase;
+  max-height: 200px;
 }
 
 #cta .title,
@@ -67,6 +69,7 @@
   display: none;
   box-sizing: border-box;
 }
+
 .texto-home.ativo {
   display: block;
   width: 100%;
@@ -197,6 +200,7 @@
     padding: var(--hero-padding-top) var(--hero-padding-right) var(--hero-padding-bottom) var(--hero-padding-left);
     background-position: right bottom;
     background-size: auto 50%;
+    max-height: 250px;
   }
 
   #home .container {

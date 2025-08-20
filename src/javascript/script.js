@@ -5,22 +5,28 @@ $(document).ready(function() {
     });
 
 $(document).ready(function() {
-  $('a[href="#sobre-nos"]').click(function(e) {
-    e.preventDefault();
+    $('a[href="#sobre-nos"]').on('click', function(e) {
+        e.preventDefault();
+        if ($(".title").is(":visible")) {
+            $(".title").fadeOut(300, function() {
+                $(".texto-home").fadeIn(300).addClass("ativo");
+                $('.nav-item a[href="#sobre-nos"]').parent().addClass("active");
+                $('.nav-item a[href="#home"]').parent().removeClass("active");
+            });
+        }
+    });
 
-    $(".title").removeClass("ativo");
-    $(".texto-home").addClass("ativo");
-
-    if ($(".title").is(":visible")) {
-      $(".title").fadeOut(function() {
-        $(".texto-home").fadeIn();
-      });
-    } else {
-      $(".texto-home").fadeOut(function() {
-        $(".title").fadeIn();
-      });
-    }
-  });
+    $('a[href="#home"]').on('click', function(e) {
+        e.preventDefault();
+        if ($(".texto-home").is(":visible")) {
+            $(".texto-home").fadeOut(300, function() {
+                $(".title").fadeIn(300);
+                $(".texto-home").removeClass("ativo");
+                $('.nav-item a[href="#home"]').parent().addClass("active");
+                $('.nav-item a[href="#sobre-nos"]').parent().removeClass("active");
+            });
+        }
+    });
 });
 
 
