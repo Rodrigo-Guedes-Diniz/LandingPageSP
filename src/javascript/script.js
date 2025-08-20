@@ -4,7 +4,25 @@ $(document).ready(function() {
         $('#mobile_btn').find('i').toggleClass('fa-x');
     });
 
-    
+$(document).ready(function() {
+  $('a[href="#sobre-nos"]').click(function(e) {
+    e.preventDefault();
+
+    $(".title").removeClass("ativo");
+    $(".texto-home").addClass("ativo");
+
+    if ($(".title").is(":visible")) {
+      $(".title").fadeOut(function() {
+        $(".texto-home").fadeIn();
+      });
+    } else {
+      $(".texto-home").fadeOut(function() {
+        $(".title").fadeIn();
+      });
+    }
+  });
+});
+
 
     const sections = $('section');
     const navItems = $('.nav-item');

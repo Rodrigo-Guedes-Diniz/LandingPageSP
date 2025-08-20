@@ -195,6 +195,11 @@
 }
 
 @media screen and (max-width: 1023px) {
+
+    #servicos .section-title {
+        font-size: 20pt;
+    }
+
     .cartao {
         overflow: hidden;
     }

@@ -1,152 +1,237 @@
+:root {
+  --color-primary-1: #16678f;
+  --color-primary-3: #ffffff;
+  --color-neutral-1: #f5f5f5;
+
+  --hero-padding-left: 10%; 
+  --hero-padding-top: 28px;
+  --hero-padding-bottom: 32px;
+  --hero-padding-right: 4%;
+  --hero-banner-max: clamp(180px, 32vw, 590px);
+}
+
 #home {
-    display: flex;
-    position: relative;
-    background-color: var(--color-primary-1);
-    max-height: fit-content;
-    background-image: url(../images/FOTO\ SERGIO.jpg);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    background-position: 85%;
-}
-
-#banner, #cta {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
   box-sizing: border-box;
-}
-#home .container {
-  margin-left: 10%;
+  background-color: var(--color-primary-1);
+  background-image: url(../images/FOTO\ SERGIO.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  padding: var(--hero-padding-top) var(--hero-padding-right) var(--hero-padding-bottom) var(--hero-padding-left);
+  overflow: visible;
 }
 
-#home #cta h1 {
-    color: var(--color-primary-3);
-    font-size: 35pt;
-    width: 100%;
+#home .container {
+  margin-left: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 #cta {
-    width: 63%;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-top: 5%;
-    margin-bottom: 200px;
+  width: 100%;
+  max-width: clamp(320px, 58%, 900px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 4%;
+  margin-bottom: 200px;
+  box-sizing: border-box;
+  z-index: 3;
 }
 
-#cta .title {
-    font-size: 20px;
-    color: var(--color-neutral-1);
-}
-
-#cta .title span {
-    color: var(--color-primary-6);
+#cta .title,
+#home #cta > h1,
+#home #cta h1.title {
+  margin: 0;
+  color: var(--color-primary-3);
+  font-weight: 800;
+  line-height: 1.1;
+  font-size: clamp(28px, 6.5vw, 64px);
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 #cta .description {
-    font-size: 1.2rem;
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: var(--color-neutral-1);
+  margin: 0;
+}
+
+.texto-home {
+  display: none;
+  box-sizing: border-box;
+}
+.texto-home.ativo {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 0.5rem;
+}
+.texto-home.ativo h1,
+.texto-home.ativo h2 {
+  margin: 0;
+  color: var(--color-primary-3);
+  line-height: 1.15;
+}
+
+.texto-home.ativo h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 #cta_buttons {
-    display: flex;
-    gap: 24px;
-    font-size: 24pt;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 #cta_buttons a {
-    text-decoration: none;
-    color: var(--color-primary-1);
-    font-size: 20pt;
-    font-weight: 800;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-primary-1);
+  font-weight: 800;
+  font-size: clamp(14px, 2vw, 20px);
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 #phone_button {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 8px 14px;
-    font-weight: 500;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-}
-
-#phone_button button {
-    box-shadow: none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 14px;
+  font-weight: 500;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
 }
 
 #banner {
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    width: 70%;
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--hero-banner-max);
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  display: block;
 }
 
 #banner img {
-    margin-top: 50px;
-    height: 500px;
+  display: none !important;
 }
 
 .shape {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    border-radius: 40% 30% 0% 20%;
-    top: 0;
-    right: 0;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--hero-banner-max);
+  height: 100%;
+  border-radius: 40% 30% 0% 20%;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --hero-padding-left: 6%;
+    --hero-padding-right: 3%;
+  }
+
+  #cta {
+    max-width: clamp(300px, 62%, 760px);
+    margin-bottom: 140px;
+  }
+
+  #banner { width: clamp(160px, 28vw, 480px); }
 }
 
 @media (max-width: 768px) {
-  #cta .title,
-  #cta_buttons {
-    margin-left: 0 !important;
-    padding-left: 12px;
-    padding-right: 12px;
+  :root {
+    --hero-padding-left: 6%;
+    --hero-padding-right: 3%;
+    --hero-padding-top: 18px;
+    --hero-padding-bottom: 18px;
   }
 
-  #banner {
+  #home {
+    padding: var(--hero-padding-top) var(--hero-padding-right) var(--hero-padding-bottom) var(--hero-padding-left);
+    background-position: right top;
+    background-size: contain;
+  }
+
+  #cta {
     width: 100%;
-    justify-content: center;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 2%;
+    margin-bottom: 80px;
   }
 
-  #banner img {
-    max-width: 320px;
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  
-  #home #cta h1.title {
-    font-size: clamp(16px, 4.5vw, 28px);
-    line-height: 1.25;
+  #cta .title,
+  #home #cta > h1 {
+    font-size: clamp(20px, 7.5vw, 44px);
     text-align: left;
-    margin: 12px 0;
   }
+
+  #banner { width: clamp(140px, 30vw, 360px); display: block; }
 }
 
 @media (max-width: 450px) {
+  :root {
+    --hero-padding-left: 4%;
+    --hero-padding-right: 6%;
+    --hero-padding-top: 12px;
+    --hero-padding-bottom: 12px;
+  }
+
   #home {
-    padding: 1%;
-    height: 200px;
-    background-position: 100%;
+    padding: var(--hero-padding-top) var(--hero-padding-right) var(--hero-padding-bottom) var(--hero-padding-left);
+    background-position: right bottom;
+    background-size: auto 50%;
   }
 
-  #home #cta h1.title {
-    width: 64%;
+  #home .container {
+    margin-left: 0px;
+    width: 80%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  #cta .title,
+  #home #cta > h1 {
+    font-size: clamp(16px, 8.5vw, 28px);
     text-align: center;
-    font-size: 12pt;
+    line-height: 1.12;
   }
 
-  #banner img {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 110%;
+  #home .texto-home.ativo h1,
+  #home .texto-home.ativo h2 {
+    width: 60%;
+    font-size: 10px;
+    margin-left: 30px;
   }
 
-  #cta_buttons {
-    display: none;
+  #home .texto-home.ativo h1 {
+    width: 100%;
   }
+
+  #home .texto-home.ativo h2 {
+    margin-top: 20px;
+  }
+
+  #cta_buttons { display: none; }
 }
 
+#home #cta h1,
+#home #cta .title {
+  font-size: clamp(28px, 6.5vw, 64px);
+}
