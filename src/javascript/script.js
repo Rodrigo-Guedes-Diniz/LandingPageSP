@@ -4,7 +4,6 @@ $(document).ready(function() {
         $('#mobile_btn').find('i').toggleClass('fa-x');
     });
 
-$(document).ready(function() {
     $('a[href="#sobre-nos"]').on('click', function(e) {
         e.preventDefault();
         if ($(".title").is(":visible")) {
@@ -12,7 +11,16 @@ $(document).ready(function() {
                 $(".texto-home").fadeIn(300).addClass("ativo");
                 $('.nav-item a[href="#sobre-nos"]').parent().addClass("active");
                 $('.nav-item a[href="#home"]').parent().removeClass("active");
+                $('.nav-item a[href="#servicos"]').parent().removeClass("active");
+                $('.nav-item a[href="#footer_items"], .nav-item a[href="#copyright-mobile"]').parent().removeClass("active");
+                $('html, body').animate({ scrollTop: 0 }, 500); // Rolar para o topo
             });
+        } else {
+            $('html, body').animate({ scrollTop: 0 }, 500); // Rolar para o topo
+            $('.nav-item a[href="#sobre-nos"]').parent().addClass("active");
+            $('.nav-item a[href="#home"]').parent().removeClass("active");
+            $('.nav-item a[href="#servicos"]').parent().removeClass("active");
+            $('.nav-item a[href="#footer_items"], .nav-item a[href="#copyright-mobile"]').parent().removeClass("active");
         }
     });
 
@@ -24,11 +32,18 @@ $(document).ready(function() {
                 $(".texto-home").removeClass("ativo");
                 $('.nav-item a[href="#home"]').parent().addClass("active");
                 $('.nav-item a[href="#sobre-nos"]').parent().removeClass("active");
+                $('.nav-item a[href="#servicos"]').parent().removeClass("active");
+                $('.nav-item a[href="#footer_items"], .nav-item a[href="#copyright-mobile"]').parent().removeClass("active");
+                $('html, body').animate({ scrollTop: 0 }, 500); // Rolar para o topo
             });
+        } else {
+            $('html, body').animate({ scrollTop: 0 }, 500); // Rolar para o topo
+            $('.nav-item a[href="#home"]').parent().addClass("active");
+            $('.nav-item a[href="#sobre-nos"]').parent().removeClass("active");
+            $('.nav-item a[href="#servicos"]').parent().removeClass("active");
+            $('.nav-item a[href="#footer_items"], .nav-item a[href="#copyright-mobile"]').parent().removeClass("active");
         }
     });
-});
-
 
     const sections = $('section');
     const navItems = $('.nav-item');
@@ -37,7 +52,10 @@ $(document).ready(function() {
         const header = $('header');
         const scrollPosition = $(window).scrollTop() - header.outerHeight();
 
-        let activeSectionIndex = 0;
+        // Não alterar a classe active se .texto-home ou .title estiver ativo
+        if ($(".texto-home").hasClass("ativo") || $('.nav-item a[href="#home"]').parent().hasClass("active")) {
+            return;
+        }
 
         if (scrollPosition <= 0) {
             header.css('box-shadow', 'none');
@@ -45,26 +63,25 @@ $(document).ready(function() {
             header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1');
         }
 
+        let activeSectionIndex = 0;
         sections.each(function(i) {
             const section = $(this);
             const sectionTop = section.offset().top - 96;
-            const sectionBottom = sectionTop+ section.outerHeight();
+            const sectionBottom = sectionTop + section.outerHeight();
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 activeSectionIndex = i;
                 return false;
             }
-        })
+        });
 
         navItems.removeClass('active');
         $(navItems[activeSectionIndex]).addClass('active');
     });
 
-    $(document).ready(function() {
-        $('#mobile_nav_list .nav-item a').on('click', function () {
-            $('#mobile_menu').removeClass('active');
-            $('#mobile_btn').find('i').removeClass('fa-x');
-        });
+    $('#mobile_nav_list .nav-item a').on('click', function () {
+        $('#mobile_menu').removeClass('active');
+        $('#mobile_btn').find('i').removeClass('fa-x');
     });
 
     ScrollReveal().reveal('#cta', {
@@ -83,43 +100,40 @@ $(document).ready(function() {
         origin: 'left',
         duration: 1000,
         distance: '20%'
-    })
+    });
 
     ScrollReveal().reveal('.card', {
         origin: 'left',
         duration: 1000,
         distance: '20%'
-    })
+    });
 
     ScrollReveal().reveal('.feedback', {
         origin: 'right',
         duration: 1000,
         distance: '20%'
-    })
-});
-
-$(document).ready(function() {
-  $(".cartao").click(function() {
-    var $this = $(this);
-
-    $(".cartao").not($this).each(function() {
-      $(this).find(".cartao-texto").slideUp(300);
-      $(this).removeClass("aberto");
-      $(this).find("i.fa-chevron-down").show();
-      $(this).find("i.fa-chevron-up").hide();
     });
 
-    if ($this.find(".cartao-texto").is(":visible")) {
-      $this.find(".cartao-texto").slideUp(300, function() {
-        $this.removeClass("aberto");
-      });
-      $this.find("i.fa-chevron-down").show();
-      $this.find("i.fa-chevron-up").hide();
-    } else {
-      $this.addClass("aberto");
-      $this.find(".cartao-texto").slideDown(300);
-      $this.find("i.fa-chevron-down").hide();
-      $this.find("i.fa-chevron-up").show();
-    }
-  });
+    $(".cartao").click(function() {
+        var $this = $(this);
+        $(".cartao").not($this).each(function() {
+            $(this).find(".cartao-texto").slideUp(300);
+            $(this).removeClass("aberto");
+            $(this).find("i.fa-chevron-down").show();
+            $(this).find("i.fa-chevron-up").hide();
+        });
+
+        if ($this.find(".cartao-texto").is(":visible")) {
+            $this.find(".cartao-texto").slideUp(300, function() {
+                $this.removeClass("aberto");
+            });
+            $this.find("i.fa-chevron-down").show();
+            $this.find("i.fa-chevron-up").hide();
+        } else {
+            $this.addClass("aberto");
+            $this.find(".cartao-texto").slideDown(300);
+            $this.find("i.fa-chevron-down").hide();
+            $this.find("i.fa-chevron-up").show();
+        }
+    });
 });
