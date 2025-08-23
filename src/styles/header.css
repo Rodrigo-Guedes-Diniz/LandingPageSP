@@ -70,9 +70,13 @@ header {
 
     #navbar img {
     display: block;
-    width: 25%;
+    width: 35%;
     margin-left: 0px;
 }
+
+    #navbar {
+        height: 10px;
+    }
 
     #mobile_btn {
         display: block;
