@@ -8,6 +8,9 @@
   --hero-padding-bottom: 32px;
   --hero-padding-right: 4%;
   --hero-banner-max: clamp(180px, 32vw, 590px);
+  --site-padding-left: 8%;
+  --site-padding-right: 8%;
+  
 }
 
 #home {
@@ -21,12 +24,11 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
-  padding: var(--hero-padding-top) var(--hero-padding-right) var(--hero-padding-bottom) var(--hero-padding-left);
+  padding: var(--hero-padding-top) var(--site-padding-right) var(--hero-padding-bottom) var(--site-padding-left);
   overflow: visible;
 }
 
 #home .container {
-  margin-left: 50px;
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
