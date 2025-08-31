@@ -22,7 +22,7 @@
   background-color: var(--color-primary-1);
   background-image: url(../images/FOTO\ SERGIO.jpg);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 87% center;
   background-size: contain;
   padding: var(--hero-padding-top) var(--site-padding-right) var(--hero-padding-bottom) var(--site-padding-left);
   overflow: visible;
@@ -59,6 +59,7 @@
   overflow-wrap: break-word;
   word-break: keep-all;
   hyphens: none;
+  margin-left: 8%;
 }
 
 #cta .description {
@@ -77,7 +78,9 @@
   width: 100%;
   max-width: 720px;
   margin-top: 0.5rem;
+  margin-left: 8%;
 }
+
 .texto-home.ativo h1,
 .texto-home.ativo h2 {
   margin: 0;
@@ -95,6 +98,7 @@
   gap: 1.5rem;
   align-items: center;
   box-sizing: border-box;
+  margin-left: 8%;
 }
 
 #cta_buttons a {
@@ -198,6 +202,12 @@
     --hero-padding-bottom: 12px;
   }
 
+  #cta .title,
+  #home #cta > h1,
+  #home #cta h1.title {
+    margin-left: 0;
+}
+
   #home .container {
     display: flex;
     flex-direction: row;
@@ -235,6 +245,10 @@
     font-size: 18pt;
     margin-top: 18%;
   }
+
+  .texto-home.ativo {
+  margin-left: 0%;
+}
 
   #home .texto-home.ativo h2 {
     width: 100%;

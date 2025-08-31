@@ -32,37 +32,46 @@
 }
 
 #cartoes {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 91%;   /* largura máxima do conjunto — ajuste conforme preferir */
+  margin: 0 auto;      /* centraliza todo o bloco */
+  box-sizing: border-box;
+  padding: 0 16px;     /* folga lateral para telas pequenas */
 }
 
-.fila-um, .fila-dois {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-items: flex-start;
-}
-
+.fila-um,
 .fila-dois {
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* mantém a posição relativa dos cartões */
+  gap: 24px;
+  width: 100%;          /* agora a fila preenche o bloco centralizado */
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0;            /* sem deslocamento lateral */
 }
 
 .cartao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    gap: 18px;
-    width: 100%;
-    max-width: 280px;
-    padding: 20px;
-    background-color: var(--color-primary-1);
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: box-shadow .18s ease, border-radius .12s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 18px;
+  padding: 20px;
+  background-color: var(--color-primary-1);
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow .18s ease, border-radius .12s ease;
+
+  /* torna o cartão flexível em largura (por padrão ocupa o máximo possível) */
+  flex: 0 1 auto;
+  width: auto;
+  max-width: none; /* remove o limite fixo que impedia o stretch */
+  min-width: 0;    /* evita overflow de conteúdos internos */
 }
 
 .cartao p, .cartao i {

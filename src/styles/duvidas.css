@@ -3,33 +3,21 @@
   color: var(--color-primary-3);
   width: 100%;
   box-sizing: border-box;
+  min-height: 350px;
 }
 
 #duvidas .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 8%;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.metadeUm,
-.metadeDois {
-  flex: 1 1 50%;
-  box-sizing: border-box;
-}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92%;
+    margin: 0 auto;
+  }
 
 .metadeUm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 1.5rem;
-  padding: 0;
   margin: 0;
+  padding: 1.5rem;
 }
 
 .metadeUm h1 {
@@ -46,7 +34,7 @@
 
 .metadeUm .cta_buttons {
   display: block;
-  margin-top: 6px;
+  margin-top: 50px;
 }
 
 .cta_buttons a.btn-default {
@@ -62,12 +50,9 @@
 }
 
 .metadeDois {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 1rem;
-  padding: 0;
+  padding: 1.5rem;
+
 }
 
 .metadeDois ul {
@@ -77,6 +62,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 }
 
 .metadeDois li {
@@ -104,59 +90,105 @@
   margin-top: 12px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 450px) {
+
   #duvidas .container {
     display: flex;
     flex-direction: column;
     padding: 40px 6%;
-    gap: 5rem;
+    gap: 3.5rem;
+    width: 100%;
+    max-width: none; 
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+   .metadeUm .cta_buttons {
+    display: none !important;
+  }
+
+  .metadeUm {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0;
   }
 
   .metadeUm h1 {
     font-size: 18pt;
+    margin-bottom: 6px;
   }
 
   .metadeUm h2 {
     font-size: 14pt;
+    line-height: 1.2;
   }
 
-  .metadeUm .cta_buttons {
-    display: none;
+  .metadeDois .cta_buttons {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .metadeUm {
-    align-items: center;
-    text-align: center;
+  .metadeDois .cta_buttons a.btn-default {
+    font-size: 12pt;
+    padding: 12px 20px;
+    min-width: 260px;
+    width: auto;
   }
 
   .metadeDois {
+    width: 100%;
+    padding: 0;
     align-items: center;
   }
 
   .metadeDois ul {
     gap: 18px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .metadeDois li {
     gap: 12px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+
+  .metadeDois img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
   }
 
   .metadeDois h2 {
-    font-size: 14pt;
-  }
-
-  .metadeDois img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .metadeDois .cta_buttons a {
     font-size: 12pt;
-    font-weight: 800;
   }
 
   .metadeDois .cta_buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .metadeDois .cta_buttons a.btn-default {
+    font-size: 12pt;
+    padding: 16px 28px;
+    width: 100%; 
+    min-width: 0;
+    border-radius: 12px;
+    font-weight: 800;
+  }
+
+  #duvidas .container,
+  #duvidas .container * {
+    box-sizing: border-box;
   }
 }

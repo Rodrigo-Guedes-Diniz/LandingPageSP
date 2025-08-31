@@ -19,12 +19,19 @@
 
 .icones {
   display: flex;
-  justify-content: center;   
-  align-items: flex-start;  
+  justify-content: space-between;
   gap: 80px;         
-  margin: 0 auto;           
-  padding: 0 4%;
+  margin: 0 auto;        
   box-sizing: border-box;
+  width: 90%;
+}
+
+.icones .icone:first-child {
+  margin-left: 5%;
+}
+
+.icones .icone:last-child {
+  margin-right: 5%;
 }
 
 .icones > div {
@@ -84,19 +91,29 @@
   font-size: 12pt;
 }
 
-  
-
   .icones {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
   .icones > div {
     flex: none;
-    width: 100%;
+    width: 90%;
     max-width: 420px;
     padding: 10px 0;
   }
+
+  .icones .icone:first-child {
+  margin-left: 0;
+}
+
+.icones .icone:last-child {
+  margin-right: 0;
+}
+
   .icones img { width: 80px; }
   .icones h3 { font-size: 22px; }
   .icones p { font-size: 15px; max-width: 420px; text-align: center; }
