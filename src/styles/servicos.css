@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary-2);
-    gap: 5rem;
 }
 
 #servicos img {
@@ -34,23 +33,23 @@
 #cartoes {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 91%;   /* largura máxima do conjunto — ajuste conforme preferir */
-  margin: 0 auto;      /* centraliza todo o bloco */
+  gap: 4rem;
+  width: 91%;
+  margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 16px;     /* folga lateral para telas pequenas */
+  padding: 0 16px;
 }
 
 .fila-um,
 .fila-dois {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* mantém a posição relativa dos cartões */
+  justify-content: space-between;
   gap: 24px;
-  width: 100%;          /* agora a fila preenche o bloco centralizado */
+  width: 100%;
   box-sizing: border-box;
   background-color: transparent;
-  margin: 0;            /* sem deslocamento lateral */
+  margin: 0;
 }
 
 .cartao {
@@ -67,11 +66,10 @@
   cursor: pointer;
   transition: box-shadow .18s ease, border-radius .12s ease;
 
-  /* torna o cartão flexível em largura (por padrão ocupa o máximo possível) */
   flex: 0 1 auto;
   width: auto;
-  max-width: none; /* remove o limite fixo que impedia o stretch */
-  min-width: 0;    /* evita overflow de conteúdos internos */
+  max-width: 30%;
+  min-width: 0;
 }
 
 .cartao p, .cartao i {
