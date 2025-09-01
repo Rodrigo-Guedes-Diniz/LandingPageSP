@@ -7,12 +7,12 @@
 }
 
 #duvidas .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 92%;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 92%;
+  margin: 0 auto;
+}
 
 .metadeUm {
   gap: 1.5rem;
@@ -47,12 +47,12 @@
   border-radius: 12px;
   font-weight: 700;
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  white-space: nowrap; /* impede quebra de linha */
 }
 
 .metadeDois {
   gap: 1rem;
   padding: 1.5rem;
-
 }
 
 .metadeDois ul {
@@ -91,7 +91,6 @@
 }
 
 @media screen and (max-width: 450px) {
-
   #duvidas .container {
     display: flex;
     flex-direction: column;
@@ -103,7 +102,7 @@
     align-items: center;
   }
 
-   .metadeUm .cta_buttons {
+  .metadeUm .cta_buttons {
     display: none !important;
   }
 
@@ -125,18 +124,21 @@
   }
 
   .metadeDois .cta_buttons {
-    display: block;
-    margin-top: 12px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
   }
 
   .metadeDois .cta_buttons a.btn-default {
     font-size: 12pt;
-    padding: 12px 20px;
-    min-width: 260px;
-    width: auto;
+    padding: 16px 28px;
+    width: 100%; 
+    min-width: 0;
+    border-radius: 12px;
+    font-weight: 800;
+    white-space: nowrap; /* impede quebra também no mobile */
   }
 
   .metadeDois {
@@ -159,7 +161,6 @@
     justify-content: flex-start;
   }
 
-
   .metadeDois img {
     width: 40px;
     height: 40px;
@@ -168,23 +169,6 @@
 
   .metadeDois h2 {
     font-size: 12pt;
-  }
-
-  .metadeDois .cta_buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    width: 100%;
-  }
-
-  .metadeDois .cta_buttons a.btn-default {
-    font-size: 12pt;
-    padding: 16px 28px;
-    width: 100%; 
-    min-width: 0;
-    border-radius: 12px;
-    font-weight: 800;
   }
 
   #duvidas .container,
