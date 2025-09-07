@@ -131,10 +131,10 @@
   }
 
   .metadeDois .cta_buttons a.btn-default {
-  display: flex;               /* transforma o botão em flexbox */
-  justify-content: center;     /* centraliza horizontalmente */
-  align-items: center;         /* centraliza verticalmente */
-  text-align: center;          /* garante centralização do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
@@ -142,7 +142,7 @@
   padding: 16px 28px;
   border-radius: 12px;
   font-weight: 800;
-  white-space: nowrap;         /* opcional: impede quebra se você quiser */
+  white-space: nowrap;
 }
 
   .metadeDois {
