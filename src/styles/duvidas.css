@@ -47,7 +47,6 @@
   border-radius: 12px;
   font-weight: 700;
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  white-space: nowrap; /* impede quebra de linha */
 }
 
 .metadeDois {
@@ -132,14 +131,19 @@
   }
 
   .metadeDois .cta_buttons a.btn-default {
-    font-size: 12pt;
-    padding: 16px 28px;
-    width: 100%; 
-    min-width: 0;
-    border-radius: 12px;
-    font-weight: 800;
-    white-space: nowrap; /* impede quebra também no mobile */
-  }
+  display: flex;               /* transforma o botão em flexbox */
+  justify-content: center;     /* centraliza horizontalmente */
+  align-items: center;         /* centraliza verticalmente */
+  text-align: center;          /* garante centralização do texto */
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-size: 12pt;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-weight: 800;
+  white-space: nowrap;         /* opcional: impede quebra se você quiser */
+}
 
   .metadeDois {
     width: 100%;

@@ -33,7 +33,7 @@
 #cartoes {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   width: 91%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -50,6 +50,10 @@
   box-sizing: border-box;
   background-color: transparent;
   margin: 0;
+}
+
+#servicos img.bpo-image {
+  width: 38%;
 }
 
 .cartao {
