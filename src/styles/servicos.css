@@ -30,6 +30,10 @@
     margin-top: 10px;
 }
 
+#servicos .cartao-cnpj img {
+    margin-left: 20px !important;
+}
+
 #cartoes {
   display: flex;
   flex-direction: column;
@@ -223,3 +227,13 @@
         border-radius: 0 0 20px 20px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+  /* garante seletor específico e sem !important */
+  #servicos .fila-um > .cartao.cartao-cnpj .cartao-header > img.cartao-image {
+    align-self: center;            /* mantém a imagem centralizada no eixo do flex */
+    transform: translateX(5%);   /* deslocamento visual para a direita (ajuste abaixo) */
+    transition: transform .12s ease;
+  }
+}
+
